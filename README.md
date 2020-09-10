@@ -1,4 +1,3 @@
 # DonHormiga
 
-This is the README
-Here I am doing some changes in this file
+Here you can access to DonHormiga: https://javier-gonzalez-huarte.github.io/DonHormiga/
