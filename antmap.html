@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Don Hormiga</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+<div id="map"></div>
+<script>
+    function initMap() {
+        var location = {lat: 42.815747, lng: -1.647723};
+        var map = new google.maps.Map(document.getElementById("map"),{
+            zoom: 9,
+            center: location
+        });
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map
+        });
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxSbkIScA9aD5nLJ3R5vd8U3jlH1bjT5o&callback=initMap">
+
+</script>
+<div id="container">
+<div id="header"><h1>Don Hormiga</h1></div>
+  <div id="wrapper">
+
+  </div>
+  <div id="navigation">
+    <p><strong>Cosas utiles</strong></p>
+    <ul>
+      <li><a href="file:///C:/Users/Javier/Desktop/AntWeb_1/ants.html" target="_blank">Especies de hormigas</a></li>
+      <li><a href="http://www.google.com" target="_blank">Mapa de especies</a></li>
+    </ul>
+  </div>
+  <div id="footer">
+    <p>Creada por Javier Gonzalez Huarte</p>
+  </div>
+</div>
+</body>
+</html>
