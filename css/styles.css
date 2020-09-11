@@ -1,0 +1,149 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
+
+/*--- For mobile ----*/
+
+* {
+	text-decoration: none;
+}
+body {
+	/*background-color: #f3f3f3;*/
+}
+
+header {
+	background-color: #fff;
+	width: 100%;
+	height: 100px;
+}
+
+header .header-logo {
+	font-family: Arial;
+	font-size: 24px;
+	text-transform: uppercase;
+	color: #111;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	padding: 20px 0px;
+}
+
+header nav ul {
+	display: block;
+	margin: 0 0;
+	width: fit-content;
+}
+
+header nav ul li {
+	display: block;
+	float: left;
+	list-style: none;	
+	padding: 0 12px;
+}
+
+header nav ul li a {
+	font-family: Arial;
+	font-size: 18px;
+	color: #111;	
+}
+
+header .header-cases {
+	display: none;
+}
+
+/* INDEX */
+
+.index-banner {
+	width: 100%;
+	height: calc(100vh - 100px);
+	background-image: url(../img/img1.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	display: table;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.index-banner h1 {
+	font-family: Arial;
+	font-size: 40px;
+	font-weight: 800;
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+	line-height: 70px;
+	text-shadow: 2px 2px 8px #111;
+}
+
+.index-banner h2 {
+	font-family: Arial;
+	font-size: 24px;
+	color: #fff;
+	text-align: center;
+	text-shadow: 2px 2px 8px #111;
+	line-height: 40px;
+}
+
+.vertical-center {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.index-boxlink {
+	margin: 16px 16px 0;
+	width: calc(100% - 30px);
+	height: 100px;
+	background-color: #f2f2f2 ;
+}
+
+.index-boxlink h3 {
+	font-size: 24px;
+	font-family: Arial;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #111;
+	line-height: 100px;
+	text-align: center;
+}
+
+/*FOOTER*/
+
+footer {
+	width: calc(100% - 80px);
+	padding: 40px 40px;
+	margin-top: 20px;
+	background-color: #111;
+	overflow: hidden;
+}
+
+footer ul {
+	width: fit-conent;
+	float: left;
+	padding-left: 20px;
+}
+
+footer ul li {
+	display: block;
+	list-style: none;	
+}
+
+footer ul li a {
+	font-family: Arial;
+	font-size: 22px;
+	color: #fff;
+	line-height: 30px;	
+}
+
+.menu2 {
+	display: none;
+}
+
+.footer-social {
+	width: 100px;
+	float: right;
+}
+
+.footer-social img {
+	width: 100%;
+	margin-bottom: 10px;
+}
