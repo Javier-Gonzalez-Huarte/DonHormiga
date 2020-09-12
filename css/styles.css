@@ -38,6 +38,11 @@ header nav ul li {
 	padding: 0 12px;
 }
 
+header nav ul li a:hover {
+	color: #fff;
+	background-color:  #111; ;
+}
+
 header nav ul li a {
 	font-family: Arial;
 	font-size: 18px;
