@@ -1,0 +1,70 @@
+<!doctype hmtl>
+<html lang="es">
+    <head>
+        <title>Don Hormiga</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css" />
+        <!-- Styles -->
+    </head>
+    <body>
+      <header>
+        <a class="header-logo" href="index.html">Don Hormiga</a>
+        <nav>
+          <ul>
+            <li><a href="map.html">Map</a></li>
+            <li><a href="about.html">species</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <a class="header-cases" href= "cases.html">Cases</a>
+        </nav>
+      </header>
+      <main>
+          <div class="map">
+            <script>
+                function initMap() {
+                    var location = {lat: 42.815747, lng: -1.647723};
+                    var map = new google.maps.Map(document.getElementById("map"),{
+                        zoom: 9,
+                        center: location
+                    });
+                    var marker = new google.maps.Marker({
+                        position: location,
+                        map: map
+                    });
+                }
+            </script>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxSbkIScA9aD5nLJ3R5vd8U3jlH1bjT5o&callback=initMap">
+            </script>
+          </div>
+          <footer>
+            <ul class="menu1">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Cases</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">About me</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="menu2">
+              <li>Latest Cases</li>
+              <li><a href="#">cosas1</a></li>
+              <li><a href="#">cosas2</a></li>
+              <li><a href="#">cosas3</a></li>
+              <li><a href="#">cosas4</a></li>
+            </ul>
+            <div class="footer-social">
+              <a href="#">
+                <img src="img/img2.jpg" alt="sociallogo1">
+              </a>
+              <a href="#"> 
+                <img src="img/img2.jpg" alt="sociallogo2">
+              </a>
+              <a href="#">
+                <img src="img/img2.jpg" alt="sociallogo3">
+              </a>
+            </div>
+          </footer>
+        </div>
+      </main>
+    </body>
+</html>
