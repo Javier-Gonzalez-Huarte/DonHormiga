@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
+
 /*--- For mobile ----*/
 
 * {
@@ -7,6 +10,10 @@ body {
 	/*background-color: #f3f3f3;*/
 }
 
+/* Map */
+#mapISS {
+	height: calc(100% - 100px);               
+}
 header {
 	background-color: #fff;
 	width: 100%;
@@ -50,51 +57,50 @@ header .header-cases {
 }
 
 @media only screen and (min-width: 1000px) {
-header .header-logo {
-	margin: 31px 0;
-	text-align: left;
-	line-height: 38px;
-	padding: 0px 20px 0px 40px;
-	border-right: 3px solid #111;
-	float: left;
-}
-	
-header nav ul {
-	margin: 20px 20px;
-	float: left;
-}
-	
-header nav ul li {
-	display: block;
-	float: left;
-	list-style: none;	
-	padding: 0 12px;
-}
-	
-header nav ul li a {
-	line-height: 60px;
-}
-	
-header nav ul li a:hover {
-	border-bottom: 1px solid #111;
-	padding-bottom: 5px;
-}
+	header .header-logo {
+		margin: 31px 0;
+		text-align: left;
+		line-height: 38px;
+		padding: 0px 20px 0px 40px;
+		border-right: 3px solid #111;
+		float: left;
 
+	}
+	header nav ul {
+		margin: 20px 20px;
+		float: left;
+	}
 	
-header .header-cases {
-	display: block;
-	font-family: Arial;
-	font-size: 18px;
-	color: #111;	
-	text-transform: uppercase;
-	line-height: 40px;
-	border: 1px solid #111;
-	float: right;
-	margin-right: 40px;
-	margin-top: 30px;
-	padding: 0 20px;
-	height: 40px;
-}
+	header nav ul li {
+		display: block;
+		float: left;
+		list-style: none;	
+		padding: 0 12px;
+	}
+	
+	header nav ul li a {
+		line-height: 60px;
+	}
+
+	header nav ul li a:hover {
+		border-bottom: 1px solid #111;
+		padding-bottom: 5px;
+	}
+
+	header .header-cases {
+		display: block;
+		font-family: Arial;
+		font-size: 18px;
+		color: #111;	
+		text-transform: uppercase;
+		line-height: 40px;
+		border: 1px solid #111;
+		float: right;
+		margin-right: 40px;
+		margin-top: 30px;
+		padding: 0 20px;
+		height: 40px;
+	}
 }
 
 /* INDEX */
@@ -195,6 +201,21 @@ header .header-cases {
 
 	.map .index-boxlink {
 		background-image: url(../img/map1.PNG);
+		transition: 1s;
+	}
+	.map .index-boxlink:hover{
+		filter:grayscale(100%);
+		transform: scale(1.1);
+	}
+
+	.species .index-boxlink {
+		background-image: url(../img/img3.jpg);
+		transition: 1s;
+	}
+
+	.species .index-boxlink:hover{
+		filter:grayscale(100%);
+		transform: scale(1.1);
 	}
 
 	.index-boxlink h3 {
@@ -203,6 +224,7 @@ header .header-cases {
 		color: #fff;
 		text-shadow: 2px 2px 8px #111;
 	}
+
 }
 
 /*FOOTER*/
@@ -231,10 +253,6 @@ footer ul li a {
 	font-size: 22px;
 	color: #fff;
 	line-height: 30px;	
-}
-
-.menu2 {
-	display: none;
 }
 
 .footer-social {
