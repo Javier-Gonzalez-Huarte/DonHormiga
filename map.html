@@ -42,10 +42,213 @@
         const tiles = L.tileLayer(tileUrl, { attribution });
         tiles.addTo(map);
 
-        const marker = L.marker([42.812527,-1.645774]).addTo(map);
-        marker.bindPopup("<b>Hello world!</b><br>I am a popup.");
         const api_url = 'https://api.wheretheiss.at/v1/satellites/25544';
-               
+
+        // Adding markers for different species
+        var Asiain = L.marker([42.831240,-1.786590]).bindPopup('Asiain'),
+            Bardenas_Reales = L.marker([42.188188, -1.478306]).bindPopup('Bardenas Reales'),
+            Castejon = L.marker([42.169218, -1.688535]).bindPopup('Castejon'),
+            laguna_de_Pitillas = L.marker([42.412657, -1.582230]).bindPopup('Laguna de Pitillas'),
+            Marcilla = L.marker([42.327491, -1.737481]).bindPopup('Marcilla'),
+            Mendavia = L.marker([42.442016, -2.202525]).bindPopup('Mendavia'),
+            Pamplona = L.marker([42.814495, -1.645387]).bindPopup('Pamplona'),
+            San_Adrian = L.marker([42.334852, -1.935515]).bindPopup('San Adrian'),
+            Tudela = L.marker([42.055630, -1.606207]).bindPopup('Tudela'),
+            Vedado_de_Eguaras = L.marker([42.259813, -1.544633]).bindPopup('Vedado de Eguaras'),
+            Echauri = L.marker([42.794522, -1.787228]).bindPopup('Etxauri'),
+            Quinto_Real = L.marker([43.044437, -1.474128]).bindPopup('Quinto Real'),
+            Ulzama = L.marker([43.006586, -1.678855]).bindPopup('Ulzama'),
+            Sierra_de_Urbasa = L.marker([42.877610, -2.087671]).bindPopup('Sierra de Urbasa'),
+            Urruaul_Bajo = L.marker([42.684994, -1.345807]).bindPopup('Urruaul Bajo');
+            SM_de_Aralar = L.marker([42.947352, -1.965927]).bindPopup('Santuario San Miguel de Aralar'),
+            Barasoain = L.marker([42.604848, -1.645163]).bindPopup('Barasoain'),
+            Artikutza = L.marker([43.213966, -1.796682]).bindPopup('Artikutza'),
+            Goizueta = L.marker([43.172782, -1.864750]).bindPopup('Goizueta'),
+            Añorbe = L.marker([42.658483, -1.715165]).bindPopup('Añorbe'),
+            Aranguren = L.marker([42.789148, -1.535048]).bindPopup('Aranguren'),
+            Beunza = L.marker([42.969470, -1.722463]).bindPopup('Beunza'),
+            Esnezelaieta = L.marker([43.0295704, -1.4572099]).bindPopup('Esnezelaieta'),
+            Juslapeña = L.marker([42.895897, -1.705824]).bindPopup('Juslapeña'),
+            Zazpe = L.marker([42.820955, -1.407529]).bindPopup('Zazpe'),
+            Olaberri = L.marker([42.805087, -1.400164]).bindPopup('Olaberri'),
+            Zuraun = L.marker([ 43.0313695, -1.4731709]).bindPopup('Zuraun'),
+            Puente_la_reina = L.marker([42.673037, -1.813737]).bindPopup('Puente la Reina'),
+            Alsasua = L.marker([42.894533, -2.171400]).bindPopup('Alsasua'),
+            Orbaizeta = L.marker([42.974471, -1.229407]).bindPopup('Orbaizeta'),
+            Biguezal = L.marker([42.686061, -1.152652]).bindPopup('Bigüezal'),
+            Sierra_del_perdon = L.marker([42.735505, -1.714719]).bindPopup('Sierra del Perdon'),
+            Valle_de_longuida = L.marker([42.754439, -1.380233]).bindPopup('Valle de Longuida'),
+            Sierra_de_Abodi = L.marker([42.959998, -1.095259]).bindPopup('Sierra de Abodi'),
+            Lizarraga = L.marker([42.874480, -2.035919]).bindPopup('Lizarraga'),
+            Isaba = L.marker([42.861108, -0.924057]).bindPopup('Isaba'),
+            Burguete = L.marker([42.989587, -1.334881]).bindPopup('Burguete'),
+            Carrascal = L.marker([42.653701, -1.645437]).bindPopup('Carrascal'),
+            Zizur = L.marker([42.769249, -1.740642]).bindPopup('Zizur'),
+            Foz_de_Arbayun = L.marker([42.677329, -1.187885]).bindPopup('Foz de Arbayun'),
+            Huarte = L.marker([42.829847, -1.590263]).bindPopup('Huarte'),
+            Ibero = L.marker([42.802559, -1.774005]).bindPopup('Ibero'),
+            Izaga = L.marker([42.713798, -1.428575]).bindPopup('Izaga'),
+            Ilurdotz = L.marker([42.875827, -1.541254]).bindPopup('Ilurdotz'),
+            Mendigorria = L.marker([42.627549, -1.833298]).bindPopup('Mendigorria'),
+            Puerto_de_Velate = L.marker([43.035808, -1.633678]).bindPopup('Puerto de Velate'),
+            Roncal = L.marker([42.808472, -0.955689]).bindPopup('Roncal'),
+            Sansoain = L.marker([42.566542, -1.597794]).bindPopup('Sansoain'),
+            Ultzama = L.marker([43.020175, -1.686904]).bindPopup('Valle de Ultzama'),
+            Tafalla = L.marker([42.521268, -1.677259]).bindPopup('Tafalla'),
+            Untzue = L.marker([42.652910, -1.625553]).bindPopup('Untzue'),
+            Beramendi = L.marker([42.980369, -1.822898]).bindPopup('Beramendi'),
+            Lizaso = L.marker([42.967662, -1.684805]).bindPopup('Lizaso'),
+            Salinas_de_Oro = L.marker([42.775319, -1.889228]).bindPopup('Salinas de Oro'),
+            Usun = L.marker([42.665752, -1.220147]).bindPopup('Usun'),
+            Baranain = L.marker([42.804362, -1.684624]).bindPopup('Barañain'),
+            Elcano = L.marker([42.830644, -1.545973]).bindPopup('Elcano'),
+            Mendillorri = L.marker([42.809240, -1.614180]).bindPopup('Mendillorri'),
+            Rochapea = L.marker([42.823993, -1.648182]).bindPopup('Arrotxapea'),
+            Tabar = L.marker([42.668138, -1.345240]).bindPopup('Tabar'),
+            Charca_de_Traibuenas = L.marker([42.366806,-1.628056]).bindPopup('Charca de Traibuenas'),
+            Roncesvalles = L.marker([43.009437, -1.320002]).bindPopup('Roncesvalles'),
+            Puerto_Ibaneta = L.marker([43.022569, -1.324778]).bindPopup('Puerto Ibañeta'),
+            Alto_de_Urraul = L.marker([42.765413, -1.198107]).bindPopup('Alto de Urraul'),
+            Burgui = L.marker([42.721408, -1.002755]).bindPopup('Burgui'),
+            Aranaz = L.marker([43.195266, -1.725544]).bindPopup('Aranaz'),
+            Monreal = L.marker([42.704838, -1.506054]).bindPopup('Monreal'),
+            Obanos = L.marker([42.679513, -1.785420]).bindPopup('Obanos'),
+             Tajonar = L.marker([42.768280, -1.608127]).bindPopup('Tajonar'),
+            Ulzurrun = L.marker([42.856096, -1.854401]).bindPopup('Ulzurrun'),
+            Zubiri = L.marker([42.929840, -1.504240]).bindPopup('Zubiri'),
+            San_Cristobal = L.marker([42.853548, -1.660901]).bindPopup('San Cristobal'),
+            Itxako = L.marker([42.671796, -2.037254]).bindPopup('Estella - Itxako'),
+            Puerto_de_Lizarraga = L.marker([]).bindPopup('Puerto de Lizarraga'),
+            Zizur_menor = L.marker([42.870991, -2.058654]).bindPopup('Zizur menor'),
+            Nagore = L.marker([42.853141, -1.375965]).bindPopup('Nagore'),
+            Berriozar = L.marker([42.836339, -1.672198]).bindPopup('Berriozar'),
+            Etxarri = L.marker([42.905311, -2.064541]).bindPopup('Etxarri-Aranatz');
+
+        // Call places per species
+        var ponera_coarctata = L.layerGroup([SM_de_Aralar]);
+        var plagiolepis_pygmaea = L.layerGroup([SM_de_Aralar,Bardenas_Reales,Echauri,Vedado_de_Eguaras]);
+        var lasius_niger = L.layerGroup([Pamplona, Artikutza, Goizueta, Añorbe, Aranguren, Beunza, Esnezelaieta, Juslapeña, Quinto_Real, Zazpe, Olaberri, Zuraun]);
+        var lasius_grandis = L.layerGroup([Puente_la_reina]);
+        var lasius_emarginatus = L.layerGroup([Beunza]);
+        var lasius_brunneus = L.layerGroup([Alsasua, Orbaizeta, Puente_la_reina, Artikutza, Goizueta]);
+        var lasius_alienus= L.layerGroup([Biguezal, Echauri, Juslapeña, Sierra_del_perdon, Valle_de_longuida, Zazpe, Olaberri]);
+        var lasius_fuliginosus = L.layerGroup([Juslapeña]);
+        var lasius_umbratus = L.layerGroup([Echauri]);
+        var lasius_mixtus = L.layerGroup([Artikutza, Goizueta]);
+        var lasius_flavus = L.layerGroup([Sierra_de_Abodi, Echauri, Esnezelaieta, Quinto_Real, Lizarraga]);
+        var lasius_meridionalis = L.layerGroup([Artikutza, Goizueta]);
+        var lasius_sabularum = L.layerGroup([Isaba]);
+        var camponotus_ligniperdus = L.layerGroup([Burguete]);
+        var camponotus_cruentatus = L.layerGroup([Carrascal, Zizur, Echauri, Foz_de_Arbayun, Huarte, Ibero, Izaga, Ilurdotz, Mendigorria, Pamplona, Puente_la_reina, Puerto_de_Velate, Roncal, Sansoain, Sierra_del_perdon, Sierra_de_Urbasa, Ultzama, Tafalla, Untzue]);
+        var camponotus_micans = L.layerGroup([Sierra_del_perdon]);
+        var camponotus_sylvaticus = L.layerGroup([Bardenas_Reales, Vedado_de_Eguaras]);
+        var camponotus_pilicornis = L.layerGroup([Beramendi, Echauri, Lizaso, Pamplona, Salinas_de_Oro, Sierra_de_Urbasa, Usun]);
+        var camponotus_aethiops = L.layerGroup([Roncal, Alsasua, Baranain, Bardenas_Reales, Zizur, Echauri, Elcano, Lizaso, Mendillorri, Pamplona, Rochapea, Sansoain, Sierra_del_perdon, Tabar, Charca_de_Traibuenas, Usun]);
+        var camponotus_lateralis = L.layerGroup([Vedado_de_Eguaras]);
+        var camponotus_ibericus = L.layerGroup([Vedado_de_Eguaras]);
+        var cataglyphis_ibericus = L.layerGroup([Vedado_de_Eguaras]);
+        var polyergus_rufescens = L.layerGroup([Biguezal]);
+        var formica_subrufa = L.layerGroup([Bardenas_Reales, Vedado_de_Eguaras]);
+        var formica_fusca = L.layerGroup([Artikutza, Goizueta, Bardenas_Reales, Biguezal, Puente_la_reina, Valle_de_longuida, Zuraun]);
+        var formica_lemani = L.layerGroup([Roncesvalles, Puerto_Ibaneta, Barasoain]);
+        var formica_cunicularia = L.layerGroup([Bardenas_Reales, Biguezal]);
+        var formica_gerardi = L.layerGroup([Sansoain]);
+        var formica_rufibarbis = L.layerGroup([Puerto_Ibaneta, Pamplona, Alto_de_Urraul, Biguezal, Vedado_de_Eguaras]);
+        var formica_gagates = L.layerGroup([Añorbe, Aranguren, Bardenas_Reales, Beunza, Echauri, Sansoain, Sierra_del_perdon, Zazpe, Olaberri]);
+        var formica_exsecta = L.layerGroup([Zuraun]);
+        var formica_rufa = L.layerGroup([Orbaizeta]);
+        var formica_pratensis = L.layerGroup([Burgui, Roncal, Beramendi, Berriozar, Etxarri, Echauri, Aranaz, Mendillorri, Monreal, Obanos, Pamplona, Quinto_Real, SM_de_Aralar, Tabar, Tajonar, Ulzama, Ulzurrun, Sierra_de_Urbasa, Zubiri]);
+        var formica_dusmeti = L.layerGroup([San_Cristobal, Zuraun]);
+        var formica_frontalis = L.layerGroup([Itxako, Izaga, Pamplona, Sansoain]);
+        var tapinoma_erraticum = L.layerGroup([Sierra_del_perdon]);
+        var tapinoma_nigerrima = L.layerGroup([Bardenas_Reales, Biguezal, Echauri, Puerto_de_Lizarraga]);
+        var myrmica_scabrinodis = L.layerGroup([Artikutza, Goizueta, Barasoain, Echauri, Lizarraga]);
+        var myrmica_sabuleti = L.layerGroup([Roncesvalles]);
+        var myrmica_specioides = L.layerGroup([Biguezal, Echauri, Esnezelaieta, Quinto_Real]);
+        var stenamma_debile = L.layerGroup([Artikutza, Goizueta]);
+        var aphaenogaster_gibbosa = L.layerGroup([Barasoain, Bardenas_Reales, Echauri, Sansoain, Untzue, Vedado_de_Eguaras]);
+        var aphaenogaster_iberica = L.layerGroup([San_Adrian]);
+        var messor_barbarus = L.layerGroup([Asiain, Bardenas_Reales, Castejon, laguna_de_Pitillas, Marcilla, Mendavia, Pamplona, San_Adrian, Tudela, Vedado_de_Eguaras]);
+        var messor_capitatus = L.layerGroup([Asiain, Echauri, Pamplona, Quinto_Real, Ulzama, Sierra_de_Urbasa, Urruaul_Bajo]);
+        var messor_bouvieri = L.layerGroup([Bardenas_Reales]);
+        var messor_structor = L.layerGroup([Zizur_menor, Pamplona, San_Adrian]);
+        var pheidole_pallidula = L.layerGroup([Bardenas_Reales, Echauri, Untzue,Vedado_de_Eguaras]);
+        var myrmecina_graminicola = L.layerGroup([Artikutza, Goizueta, Barasoain, Sierra_del_perdon]);
+        var crematogaster_scutellaris = L.layerGroup([Bardenas_Reales, Vedado_de_Eguaras]);
+        var crematogaster_sordidula = L.layerGroup([Vedado_de_Eguaras]);
+        var crematogaster_auberti  = L.layerGroup([Echauri, Vedado_de_Eguaras]);
+        var solenopsis_lusitanica = L.layerGroup([Echauri]);
+        var temnothorax_recedens = L.layerGroup([Barasoain]);
+        var temnothorax_nylanderi = L.layerGroup([Orbaizeta]);
+        var temnothorax_racovitzai = L.layerGroup([Bardenas_Reales, Echauri]);
+        var temnothorax_unifasciatus= L.layerGroup([Echauri]);
+        var strongylognathus_testaceus = L.layerGroup([Artikutza, Goizueta]);
+        var tetramorium_caespitum = L.layerGroup([Roncesvalles, SM_de_Aralar]);
+        var pyramica_argiola = L.layerGroup([Nagore]);
+        var pyramica_bauderi = L.layerGroup([SM_de_Aralar]);
+         
+        // Call layers
+        var overlayMaps = {
+          "ponera coarctata": ponera_coarctata,
+          "plagiolepis pygmaea": plagiolepis_pygmaea,
+          "lasius niger": lasius_niger,
+          "lasius grandis": lasius_grandis,
+          "lasius emarginatus": lasius_emarginatus,
+          "lasius brunneus": lasius_brunneus,
+          "lasius alienus": lasius_alienus,
+          "lasius fuliginosus": lasius_fuliginosus,
+          "lasius umbratus": lasius_umbratus,
+          "lasius mixtus": lasius_mixtus,
+          "lasius flavus": lasius_flavus,
+          "lasius meridionalis": lasius_meridionalis,
+          "lasius sabularum": lasius_sabularum,
+          "camponotus ligniperdus": camponotus_ligniperdus,
+          "camponotus cruentatus": camponotus_cruentatus,
+          "camponotus micans": camponotus_micans,
+          "camponotus lateralis": camponotus_lateralis,
+          "cataglyphis ibericus": cataglyphis_ibericus,
+          "polyergus rufescens": polyergus_rufescens,
+          "formica subrufa": formica_subrufa,
+          "formica fusca": formica_fusca,
+          "formica lemani": formica_lemani,
+          "formica cunicularia": formica_cunicularia,
+          "formica gerardi": formica_gerardi,
+          "formica rufibarbis": formica_rufibarbis,
+          "formica gagates": formica_gagates,
+          "formica exsecta": formica_exsecta,
+          "formica rufa": formica_rufa,
+          "formica pratensis": formica_pratensis,
+          "formica dusmeti": formica_dusmeti,
+          "formica frontalis": formica_frontalis,
+          "tapinoma erraticum": tapinoma_erraticum,
+          "tapinoma nigerrima": tapinoma_nigerrima,
+          "myrmica scabrinodis": myrmica_scabrinodis,
+          "myrmica sabuleti": myrmica_sabuleti,
+          "myrmica specioides": myrmica_specioides,
+          "stenamma debile": stenamma_debile,
+          "aphaenogaster gibbosa": aphaenogaster_gibbosa,
+          "aphaenogaster iberica": aphaenogaster_iberica,
+          "messor barbarus": messor_barbarus,
+          "messor capitatus": messor_capitatus,
+          "messor bouvieri": messor_bouvieri,
+          "messor structor": messor_structor,
+          "pheidole pallidula": pheidole_pallidula,
+          "myrmecina graminicola": myrmecina_graminicola,
+          "crematogaster scutellaris": crematogaster_scutellaris,
+          "crematogaster sordidula": crematogaster_sordidula,
+          "crematogaster auberti": crematogaster_auberti,
+          "temnothorax recedens": temnothorax_recedens,
+          "temnothorax nylanderi": temnothorax_nylanderi,
+          "temnothorax racovitzai": temnothorax_racovitzai,
+          "temnothorax unifasciatus": temnothorax_unifasciatus,
+          "strongylognathus testaceus": strongylognathus_testaceus,
+          "tetramorium caespitum": tetramorium_caespitum,
+          "pyramica argiola": pyramica_argiola,
+          "pyramica bauderi": pyramica_bauderi
+        };
+        
+        L.control.layers(overlayMaps).addTo(map);
+
       </script>
       <footer>
         <ul class="menu1">
