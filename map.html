@@ -5,11 +5,21 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/styles.css" />
-        <!-- Styles -->
+        <!-- <link rel="stylesheet" href="<c:url value='/css/main.css' /> -->
+        <!-- Links for the map -->
+        <!-- Map link -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+         <!-- Make sure you put this AFTER Leaflet's CSS -->
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+      </style>
     </head>
     <body>
       <header>
-        <a class="header-logo" href="index.html">Don Hormiga</a>
+        <a class="header-logo" href="index.html">Don Hormiga : Map</a>
         <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
@@ -19,52 +29,43 @@
           <a class="header-cases" href= "cases.html">Cases</a>
         </nav>
       </header>
-      <main>
-          <div class="map">
-            <script>
-                function initMap() {
-                    var location = {lat: 42.815747, lng: -1.647723};
-                    var map = new google.maps.Map(document.getElementById("map"),{
-                        zoom: 9,
-                        center: location
-                    });
-                    var marker = new google.maps.Marker({
-                        position: location,
-                        map: map
-                    });
-                }
-            </script>
-            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxSbkIScA9aD5nLJ3R5vd8U3jlH1bjT5o&callback=initMap">
-            </script>
-          </div>
-          <footer>
-            <ul class="menu1">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Cases</a></li>
-              <li><a href="#">Portfolio</a></li>
-              <li><a href="#">About me</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-            <ul class="menu2">
-              <li>Latest Cases</li>
-              <li><a href="#">cosas1</a></li>
-              <li><a href="#">cosas2</a></li>
-              <li><a href="#">cosas3</a></li>
-              <li><a href="#">cosas4</a></li>
-            </ul>
-            <div class="footer-social">
-              <a href="#">
-                <img src="img/img2.jpg" alt="sociallogo1">
-              </a>
-              <a href="#"> 
-                <img src="img/img2.jpg" alt="sociallogo2">
-              </a>
-              <a href="#">
-                <img src="img/img2.jpg" alt="sociallogo3">
-              </a>
-            </div>
-          </footer>
+
+      <!-- MAP -->
+      <div id="mapISS">      </div>
+
+      <script>
+        // Making map and tiles
+        const map = L.map('mapISS').setView([42.812527,-1.645774], 9);
+        const attribution =
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+        const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        const tiles = L.tileLayer(tileUrl, { attribution });
+        tiles.addTo(map);
+
+        const marker = L.marker([42.812527,-1.645774]).addTo(map);
+        marker.bindPopup("<b>Hello world!</b><br>I am a popup.");
+        const api_url = 'https://api.wheretheiss.at/v1/satellites/25544';
+               
+      </script>
+      <footer>
+        <ul class="menu1">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="species.html">Ant species</a></li>
+          <li><a href="#">About me</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="footer-social">
+          <a href="#">
+            <img src="img/img2.jpg" alt="sociallogo1">
+          </a>
+          <a href="#"> 
+            <img src="img/img2.jpg" alt="sociallogo2">
+          </a>
+          <a href="#">
+            <img src="img/img2.jpg" alt="sociallogo3">
+          </a>
         </div>
-      </main>
+      </footer>
     </body>
 </html>
