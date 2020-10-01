@@ -171,12 +171,6 @@ header .header-cases {
 		display: table;
 	}
 
-	.index-banner h1 {
-		display: block;
-		width: 600px;
-		margin: 0 auto;
-	}
-
 	.grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
@@ -261,3 +255,124 @@ footer ul li a {
 	width: 100%;
 	margin-bottom: 10px;
 }
+
+
+/* ANT SPECIES GALLERY */
+
+.Ant_gallery {
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+	grid-auto-flow: dense;
+	padding: 1rem;
+}
+
+.Ant_gallery .ant-box {
+	background-color: #CCC;
+	margin: 5px;
+	position: relative;
+}
+
+.Ant_gallery .ant-box img {
+	width: 100%;
+	height: auto;
+}
+
+.img-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(95, 51, 51, 0);
+	color: #fff;
+	text-shadow: 3px 3px 8px #111;
+	font-family: 'Quicksand', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.img-overlay:hover {
+	background: rgba(51, 51, 51, 0.6);
+	transition: 0.5s;
+}
+
+.img-overlay:hover > * {
+	opacity: 100;
+	transition: 0.5s;
+	transform: translateY(-1px);
+}
+
+.img-overlay > * {
+	transform: translateY(20px);
+	transition: tranform 0.25s;
+}
+
+.img-title {
+	font-size: 20px;
+	font-weight: bold;
+	text-shadow: 12px #111;
+}
+
+.img-descr {
+	font-size: 16px;
+	margin-top: 0.25em;
+	opacity: 0;
+}
+
+/* SPECIFIC ANT INFO */
+
+.antspecie {
+	display: grid;
+	margin: 10px 100px;
+	grid-template-columns: 70% 30%;
+	grid-template-rows: 1fr;
+	grid-template-areas: 
+	"antinfo antbox";
+	background-color: #ccc;
+}
+
+.antinfo {
+	margin: 0 40px;
+}
+
+.antinfo h2 {
+	color: rgb(55, 78, 0);
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.antinfo h1 {
+	color: rgb(0, 121, 16);
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.antinfo p {
+	color: #111;
+	font-size: 20px;
+}
+
+/* Antbox */
+.antspecie .antbox {
+	box-align: center;
+	margin: 30px 20px;
+}
+
+.antspecie .antbox .ant-title {
+	text-align: center;
+	font-size: 16px;
+	font-style: italic;
+}
+
+.antspecie .antbox img {
+	border: 1px solid #111;
+	width: 90%;
+	margin: 0 10px;
+	text-align: center;
+	background-color: #fff;
+}
+
+
